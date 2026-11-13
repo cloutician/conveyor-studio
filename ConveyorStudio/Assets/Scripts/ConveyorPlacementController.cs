@@ -19,6 +19,7 @@ public sealed partial class ConveyorPlacementController : MonoBehaviour
     [Range(0.05f, 0.25f)] public float snapSmoothTime = 0.075f;
     [SerializeField, HideInInspector] private List<PlacedConveyor> machines = new List<PlacedConveyor>();
     private PlacedConveyor preview, snapPartner, pressedMachine;
+    private ConveyorStudioHud hud;
     private bool adding, valid, dragging, followPointer;
     private Vector2 pressScreen;
     private PlacedConveyor lastTapped;
@@ -524,9 +525,14 @@ public sealed partial class ConveyorPlacementController : MonoBehaviour
     }
 
     private void ClearUiFocus() { if (EventSystem.current != null) EventSystem.current.SetSelectedGameObject(null); }
-    private bool PointerInWorld(Vector2 position) => WorldScreenRect.Contains(position)
-        && (controlBox == null || !controlBox.BlocksPointer(position))
-        && (EventSystem.current == null || !EventSystem.current.IsPointerOverGameObject());
+    private bool PointerInWorld(Vector2 position)
+    {
+        if (!WorldScreenRect.Contains(position)) return false;
+        if (hud == null) hud = GetComponent<ConveyorStudioHud>();
+        return (hud == null || !hud.BlocksPointer(position))
+            && (controlBox == null || !controlBox.BlocksPointer(position))
+            && (EventSystem.current == null || !EventSystem.current.IsPointerOverGameObject());
+    }
 
     private bool GroundPoint(Vector2 screen, out Vector3 point)
     {

@@ -60,7 +60,11 @@ title and Reframe/library controls at the right.
    clearance when needed to keep the entire near clipping plane above it. An
    inherited underground view is repaired when the camera reloads. Orbit can
    still lower to 5° above horizontal.
-8. **Hide library** expands the workspace; **Show library** restores the tools.
+8. The vertical **HIDE** tab beside the library slides it smoothly off the left
+   edge. The tab remains visible as **SHOW**. Each complete word is rotated 90°;
+   the camera viewport expands and contracts with the same animation.
+   The library equipment stays vertically centred, and the tab cannot place or
+   select a conveyor behind itself.
 
 The library, camera and editing controls are runtime components, included when
 the scene is exported as a player. The scene starts empty. Play-mode edits are
@@ -250,6 +254,9 @@ surface textures and sound effects have not been added in this integration.
   transparent previews of the actual box/can models. The editor's preview renderer
   produces those product pictures without altering the running scene.
   The app icon's rounded navy tile has transparent exterior corners.
+- Library, header and status text use TextMesh Pro signed-distance-field rendering
+  with pixel-aligned canvas geometry. The bundled font atlas, embedded fallback font
+  and shaders under `Assets/TextMesh Pro/` are included in Windows builds.
 - **Build Six-Belt Control Demo** creates a connected sample line in an empty Play
   workspace and opens the controls for Generic A. It preserves any existing layout.
 
