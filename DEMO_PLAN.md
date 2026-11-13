@@ -1,6 +1,6 @@
 # Silent demonstration plan
 
-Target: 2–3 minutes, 16:9, readable captions, real interaction in the Windows build.
+Target: 2–3 minutes, 16:10, interaction in the Windows build.
 
 | Section | What to show | Caption |
 | --- | --- | --- |
@@ -16,5 +16,3 @@ Target: 2–3 minutes, 16:9, readable captions, real interaction in the Windows 
 | Groups | Ctrl-select connected modules and move them together | Move connected selections without breaking internal joins |
 | Camera | Reframe, orbit, zoom and tuck the control box | Smooth navigation keeps the workspace accessible |
 | Closing | Finished line running, clean view | Windows build and complete Unity source included |
-
-Keep each caption on screen for long enough to read. Do not use the video to claim layout saving, side-transfer routing, sound effects or other features outside this submission.
