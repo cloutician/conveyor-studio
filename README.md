@@ -2,6 +2,8 @@
 
 An interactive modular conveyor simulator built in Unity for the VACAC Graduate Software Engineer assessment.
 
+**Source repository:** https://github.com/cloutician/conveyor-studio
+
 Choose from the supplied Generic, Short and Incline conveyors, assemble a continuous line with magnetic snapping, and transport boxes and cans using rigid-body physics. A separate 3D control box provides speed control, synchronisation, Start and a latched emergency stop.
 
 ## Run the Windows release
