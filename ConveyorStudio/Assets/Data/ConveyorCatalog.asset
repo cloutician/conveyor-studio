@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ea3547e99224d418b9c74129f644fb, type: 3}
+  m_Name: ConveyorCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::ConveyorCatalog
+  modules:
+  - kind: 0
+    title: Generic
+    description: "2.22 m  \xB7  straight"
+    prefab: {fileID: 8240550917515817601, guid: 64a4528f3ce476b43bc54dca38cd76d2, type: 3}
+    thumbnail: {fileID: 21300000, guid: 6f0dfc8ea4f303c40b2614145535c2ba, type: 3}
+  - kind: 1
+    title: Short
+    description: "1.58 m  \xB7  straight"
+    prefab: {fileID: 1451949421599743137, guid: f5418ebbc31cfe3488c7953990a8593e, type: 3}
+    thumbnail: {fileID: 21300000, guid: c7f0b178c57aad248a9220c10751ad4e, type: 3}
+  - kind: 2
+    title: Incline
+    description: "2.22 m  \xB7  20.9\xB0 rise"
+    prefab: {fileID: 1380375104248110373, guid: 933a145bd33c743408bd161995f3a58a, type: 3}
+    thumbnail: {fileID: 21300000, guid: e416555212a9f5d499a74e4a14d847bc, type: 3}
+  productPrefab: {fileID: 2059788810306277087, guid: 65b4e57b7147b934c96e6d775cd3fddf, type: 3}
+  canPrefab: {fileID: 2111707699497081588, guid: b12e3416bb447fd47a2c5685d456941f, type: 3}
+  validMaterial: {fileID: 2100000, guid: ba21fa234ebd80c4280033fba732702e, type: 2}
+  invalidMaterial: {fileID: 2100000, guid: c81dc43018950ee428148dd52b6af836, type: 2}
+  lineMaterial: {fileID: 2100000, guid: 73ee23b6ed43871479ab6995179dc39f, type: 2}

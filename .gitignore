@@ -1,0 +1,46 @@
+# Unity-generated local state
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Bb]uild/
+[Bb]uilds/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+**/.vs/
+**/.idea/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.opendb
+*.VC.db
+*.pdb
+*.mdb
+*.unitypackage
+ConveyorStudio/Assets/_Recovery/
+ConveyorStudio/Assets/_Recovery.meta
+
+# Reproducible web-model dependencies and generated captures
+node_modules/
+ControlBoxModel/previews/
+output/
+tmp/
+*.mp4
+*.mov
+*.mkv
+*.zip
+*.log
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+Thumbs.db
+.DS_Store

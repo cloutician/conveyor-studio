@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#181c20">
+  <title>Control Box — Geometry Inspector</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/src/style.css">
+  <script type="importmap">{"imports":{"three":"/vendor/three/build/three.module.js","three/addons/":"/vendor/three/examples/jsm/"}}</script>
+</head>
+<body>
+  <main class="studio">
+    <header class="topbar">
+      <div class="identity"><span class="identity-mark" aria-hidden="true">C</span><div><h1>Control box</h1><p>Geometry study <span>—</span> untextured</p></div></div>
+      <div class="toolbar"><button id="inspector-toggle" aria-expanded="true" aria-controls="inspector">Inspector</button><button id="fullscreen">Full screen</button><button id="export" class="primary">Export GLB <span aria-hidden="true">↗</span></button></div>
+    </header>
+    <div class="main-layout">
+      <section id="viewport" class="viewport" aria-label="Interactive 3D control box viewer">
+        <div class="view-toolbar" role="group" aria-label="Camera views"><button data-view="perspective" aria-pressed="true">Three-quarter</button><button data-view="front" aria-pressed="false">Front</button><button data-view="side" aria-pressed="false">Side</button><button data-view="back" aria-pressed="false">Back</button><button id="dock-toggle" aria-pressed="false">Dock right</button></div>
+        <button id="box-toggle" class="box-tab" aria-label="Hide control box" aria-expanded="true"><span id="box-toggle-arrow" aria-hidden="true">›</span><span id="box-toggle-label">Hide box</span></button>
+        <div id="loading" class="loading" role="status">Building the control box…</div>
+        <div class="view-label"><span class="live-dot" aria-hidden="true"></span><span id="view-caption">Solid geometry · no textures</span></div>
+        <div class="gesture-help">Drag background to orbit <span>·</span> Scroll or pinch to zoom <span>·</span> Operate the controls directly</div>
+      </section>
+      <aside id="inspector" class="inspector">
+        <div class="panel-heading"><span class="eyebrow">Live inspector</span><span class="revision">CB–01</span></div>
+        <section class="inspector-section">
+          <label class="field-label" for="machine">Selected machine</label>
+          <select id="machine"></select>
+          <div class="machine-add"><select id="add-type" aria-label="Conveyor type to add"><option value="generic">Generic</option><option value="short">Short</option><option value="incline">Incline</option></select><button id="add-machine">Add machine</button></div>
+          <p id="machine-count" class="machine-count" aria-live="polite">3 machines</p>
+          <div class="state-row"><span>Line</span><span id="line-state" class="state-value"><i aria-hidden="true"></i>Ready</span></div>
+          <div class="state-row"><label for="speed">Speed setting</label><output id="speed-output" for="speed">4 / 9</output></div>
+          <input id="speed" type="range" min="0" max="9" step="1" value="4" aria-label="Selected conveyor speed level">
+          <label class="check-row"><input id="link" type="checkbox"><span>Sync speeds</span></label>
+          <div class="test-buttons"><button id="start">Start line</button><button id="stop">Emergency stop</button></div>
+          <p class="subtle">Settings can be changed while stopped. Start applies the chosen speed.</p>
+        </section>
+        <section class="inspector-section">
+          <span class="field-label">Display</span>
+          <label class="check-row"><input id="wireframe" type="checkbox"><span>Wireframe</span></label>
+          <label class="check-row"><input id="dimensions" type="checkbox"><span>Dimensions</span></label>
+          <p class="dimension-note">340 × 530 × 80 mm housing</p>
+        </section>
+        <section class="inspector-section parts-section">
+          <span class="field-label">Independent moving parts</span>
+          <div class="part-row"><span class="part-dot"></span><span>Speed knob</span><span>10 detents</span></div>
+          <div class="part-row"><span class="part-dot"></span><span>Sync lever</span><span>2 positions</span></div>
+          <div class="part-row"><span class="part-dot green"></span><span>Start cap</span><span>3 mm travel</span></div>
+          <div class="part-row"><span class="part-dot red"></span><span>Emergency cap</span><span>8 mm latch</span></div>
+          <p class="subtle">Raised bezels, ridged grip, projecting lever and twin side glands. The recessed dot-matrix screen is flat.</p>
+        </section>
+        <div class="model-summary"><span>Asset only</span><span id="mesh-stats">Preparing…</span></div>
+      </aside>
+    </div>
+    <footer class="statusbar"><span id="status" role="status" aria-live="polite">Preparing the model</span><span>Three.js <span class="footer-separator">/</span> metres <span class="footer-separator">/</span> separate pivots</span></footer>
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
